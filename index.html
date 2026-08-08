@@ -327,11 +327,11 @@
       <div class="dash-cards">
         <div class="dash-card">
           <div class="dash-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19.5V6a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v13.5"></path><path d="M6 22a2 2 0 0 1-2-2v-.5A1.5 1.5 0 0 1 5.5 18H20"></path></svg></div>
-          <div><b id="statCats">1</b><span>Courses Available</span></div>
+          <div><b id="statCats">0</b><span>Courses Available</span></div>
         </div>
         <div class="dash-card">
           <div class="dash-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="3" width="16" height="18" rx="2"></rect><path d="M10 8l6 4-6 4V8z"></path></svg></div>
-          <div><b id="statTracks">1</b><span>Lectures Uploaded</span></div>
+          <div><b id="statTracks">0</b><span>Lectures Uploaded</span></div>
         </div>
         <div class="dash-card">
           <div class="dash-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 8v4l3 3"></path><circle cx="12" cy="12" r="9"></circle></svg></div>
@@ -349,12 +349,7 @@
           <p>Open a folder to see every lecture and recording inside it.</p>
         </div>
       </div>
-      <div id="catGrid" class="cat-grid"><div class="cat-card" data-cat="id_msihc1ol_fbgfyc3">
-      <div class="arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M7 17 17 7M9 7h8v8"></path></svg></div>
-      <div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="3" width="16" height="18" rx="2"></rect><path d="M8 7h8M8 11h2m3 0h3M8 15h2m3 0h3"></path></svg></div>
-      <h3>Quran Classes 2026</h3>
-      <div class="meta">1 lecture</div>
-    </div></div>
+      <div id="catGrid" class="cat-grid"></div>
     </div>
   </section>
 
@@ -402,7 +397,7 @@
 
 <footer class="footer">
   <div class="wrap footer-inner">
-    <div>© <span id="year">2026</span> Zoom Classes. Private student portal — unauthorized access is not permitted.</div>
+    <div>© <span id="year"></span> Zoom Classes. Private student portal — unauthorized access is not permitted.</div>
     <div class="admin-trigger-hint">•••</div>
   </div>
 </footer>
@@ -478,60 +473,14 @@
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"></path></svg>
           New Course
         </button>
-        <div id="adminCatList"><div class="admin-cat-item active" data-id="id_msihc1ol_fbgfyc3">
-      <span class="name">Quran Classes 2026</span>
-      <span class="count">1</span>
-    </div></div>
-      <div id="exportCardSidebar" class="export-card">
-    <h4><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--sky)" stroke-width="2.2"><path d="M12 16V4M6 10l6-6 6 6"></path><path d="M4 20h16"></path></svg> Publish for Students</h4>
-    <p>Download a self-contained copy of the portal with every course and lecture included. Host it or send it privately — students open it and everything is already there.</p>
-    <button class="btn btn-primary btn-sm" id="exportBtn" style="width:100%; justify-content:center;" disabled=""><span class="spinner"></span> Preparing…</button>
-  </div></div>
+        <div id="adminCatList"></div>
+      </div>
       <div class="admin-main" id="adminMain">
-    <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:20px; flex-wrap:wrap;">
-      <div>
-        <h3 style="font-family:var(--font-display); font-size:20px; font-weight:700;">Quran Classes 2026</h3>
-        <div style="color:var(--text-2); font-size:13px; margin-top:3px;">2 lectures</div>
+        <div class="admin-empty">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="3" width="16" height="18" rx="2"></rect><path d="M10 8l6 4-6 4V8z"></path></svg>
+          <div>Select a course, or create a new one, to start uploading lectures.</div>
+        </div>
       </div>
-      <div style="display:flex; gap:8px;">
-        <button class="btn btn-ghost btn-sm" id="renameCatBtn">Rename</button>
-        <button class="btn btn-danger-outline btn-sm" id="deleteCatBtn">Delete Course</button>
-      </div>
-    </div>
-    <div class="upload-zone" id="uploadZone">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 16V4M6 10l6-6 6 6"></path><path d="M4 20h16"></path></svg>
-      <p>Click to upload, or drag lecture recordings here</p>
-      <span>For local testing only — for your live site, use "Add via Link" below</span>
-      <input type="file" id="fileInput" accept="audio/*" multiple="" style="display:none;">
-    </div>
-    <div style="display:flex; align-items:center; gap:12px; margin:18px 0; color:var(--text-2); font-size:12px; text-transform:uppercase; letter-spacing:.05em;">
-      <div style="flex:1; height:1px; background:var(--border);"></div>or<div style="flex:1; height:1px; background:var(--border);"></div>
-    </div>
-    <div style="background:var(--bg-2); border:1px solid var(--border); border-radius:var(--radius-m); padding:18px;">
-      <div style="font-weight:600; font-size:13.5px; margin-bottom:4px;">Add via Link (recommended)</div>
-      <div style="font-size:12.5px; color:var(--text-2); margin-bottom:14px;">Paste the public URL of a file you've uploaded to Cloudflare R2, Backblaze B2, or similar. This keeps your site tiny and works at any scale.</div>
-      <div style="display:flex; gap:10px; flex-wrap:wrap;">
-        <input type="text" id="linkNameInput" placeholder="Lecture name" style="flex:1; min-width:160px; background:var(--surface); border:1px solid var(--border-hi); border-radius:9px; padding:10px 12px; font-size:13.5px;">
-        <input type="text" id="linkUrlInput" placeholder="https://pub-xxxx.r2.dev/lecture1.mp3" style="flex:2; min-width:220px; background:var(--surface); border:1px solid var(--border-hi); border-radius:9px; padding:10px 12px; font-size:13.5px;">
-        <button class="btn btn-primary btn-sm" id="addLinkBtn">Add Lecture</button>
-      </div>
-    </div>
-    <div id="uploadProgressWrap" style="margin-top:16px;"></div>
-    <div id="adminTrackList" style="margin-top:16px;">
-    <div class="admin-track" data-id="id_msik7b4f_38nb9i0">
-      <span class="drag-handle">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><circle cx="8" cy="6" r="1.4"></circle><circle cx="8" cy="12" r="1.4"></circle><circle cx="8" cy="18" r="1.4"></circle><circle cx="16" cy="6" r="1.4"></circle><circle cx="16" cy="12" r="1.4"></circle><circle cx="16" cy="18" r="1.4"></circle></svg>
-      </span>
-      <input class="a-name" data-id="id_msik7b4f_38nb9i0" value="July 1" spellcheck="false">
-      <span class="a-size">🔗 Linked</span>
-      <div class="a-actions">
-        
-        
-        <button class="icon-btn danger" data-del="id_msik7b4f_38nb9i0" title="Delete"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M9 7V4h6v3m-8 0 1 13h8l1-13"></path></svg></button>
-      </div>
-    </div>
-  </div>
-  </div>
     </div>
   </div>
 </div>
@@ -539,15 +488,15 @@
 <!-- PROMPT MODAL (create/rename category, confirm delete) -->
 <div class="overlay" id="promptOverlay">
   <div class="modal">
-    <div class="modal-head"><h3 id="promptTitle">Delete this lecture?</h3><button class="close-x" data-close="promptOverlay"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6 6 18"></path></svg></button></div>
-    <p class="sub" id="promptSub">"1 July" will be permanently removed.</p>
-    <div class="field" id="promptFieldWrap" style="display: none;">
+    <div class="modal-head"><h3 id="promptTitle">New Course</h3><button class="close-x" data-close="promptOverlay"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6 6 18"></path></svg></button></div>
+    <p class="sub" id="promptSub">Give this course a name.</p>
+    <div class="field" id="promptFieldWrap">
       <label>Course Name</label>
       <input type="text" id="promptInput" placeholder="e.g. Tafseer — Juz 1">
     </div>
     <div style="display:flex; gap:10px; margin-top:6px;">
       <button class="btn btn-ghost" style="flex:1; justify-content:center;" data-close="promptOverlay">Cancel</button>
-      <button class="btn btn-danger-outline" id="promptConfirm" style="flex:1; justify-content:center;">Delete</button>
+      <button class="btn btn-primary" id="promptConfirm" style="flex:1; justify-content:center;">Confirm</button>
     </div>
   </div>
 </div>
@@ -1377,7 +1326,7 @@ async function exportShareable(){
     let json = JSON.stringify(seed).replace(/</g, '\\u003c');
 
     // Clone the live page so we can reset UI state (close any open panels/modals)
-    // in the snapshot without touching what's actually on your screen right now.
+    // in the snapshot, without touching what is actually on screen right now.
     const docClone = document.documentElement.cloneNode(true);
     docClone.querySelectorAll('.overlay.show').forEach(el => el.classList.remove('show'));
     docClone.querySelectorAll('.cat-detail.active').forEach(el => el.classList.remove('active'));
@@ -1386,11 +1335,80 @@ async function exportShareable(){
     const clonedPlayerBar = docClone.querySelector('#playerBar');
     if(clonedPlayerBar) clonedPlayerBar.classList.remove('show');
 
-    const fullHtml = docClone.outerHTML;
-    // Remove any existing seed tag from the live DOM clone, then inject a fresh one before <script type="application/json" id="seed-data">{"categories":[{"id":"id_msihc1ol_fbgfyc3","name":"Quran Classes 2026","order":0,"createdAt":1786079022213}],"audios":[{"id":"id_msik7b4f_38nb9i0","categoryId":"id_msihc1ol_fbgfyc3","name":"July 1","order":1,"size":0,"type":"audio/mpeg","addedAt":1786083840015,"url":"https://github.com/zoomclasses/Zoom-Classes/releases/download/audio-v1/1.July.m4a","base64":null}],"adminPasswordHash":"240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9"}</script>
-</body>
-    const cleanHtml = fullHtml.replace(/<script type="application\/json" id="seed-data">[\s\S]*?<\/script>/, '');
-    const seedScript = `
+    // Remove any previously-baked seed data using a real DOM lookup (not text
+    // search) so this can never collide with matching text inside the app's
+    // own source code, which is what corrupted downloads previously.
+    const existingSeed = docClone.querySelector('#seed-data');
+    if(existingSeed) existingSeed.remove();
+
+    // Attach the fresh seed data as a real element, then serialize the whole
+    // page once, at the very end. This guarantees correct placement and a
+    // complete, uncorrupted file every time.
+    const seedEl = document.createElement('script');
+    seedEl.type = 'application/json';
+    seedEl.id = 'seed-data';
+    seedEl.textContent = json;
+    docClone.querySelector('body').appendChild(seedEl);
+
+    const finalHtml = '<!DOCTYPE html>\n' + docClone.outerHTML;
+
+    const blob = new Blob([finalHtml], {type:'text/html'});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'zoom-classes-portal.html';
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    setTimeout(()=>URL.revokeObjectURL(url), 4000);
+    toast('Shareable file downloaded', 'ok');
+  }catch(e){
+    console.error(e);
+    toast('Export failed — try again', 'err');
+  }finally{
+    btn.innerHTML = origLabel;
+    btn.disabled = false;
+  }
+}
+
+/* inject export card into admin header area once */
+function injectExportCard(){
+  const main = $('.admin-sidebar');
+  if($('#exportCardSidebar')) return;
+  const card = document.createElement('div');
+  card.id = 'exportCardSidebar';
+  card.className = 'export-card';
+  card.innerHTML = `
+    <h4><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--sky)" stroke-width="2.2"><path d="M12 16V4M6 10l6-6 6 6"/><path d="M4 20h16"/></svg> Publish for Students</h4>
+    <p>Download a self-contained copy of the portal with every course and lecture included. Host it or send it privately — students open it and everything is already there.</p>
+    <button class="btn btn-primary btn-sm" id="exportBtn" style="width:100%; justify-content:center;">Download Student Portal</button>
+  `;
+  main.appendChild(card);
+  $('#exportBtn').addEventListener('click', exportShareable);
+}
+
+/* ============================================================
+   INIT
+============================================================ */
+async function init(){
+  $('#year').textContent = new Date().getFullYear();
+
+  db = await openDB();
+  await maybeImportSeed();
+
+  State.categories = await idbGetAll('categories');
+  State.audios = await idbGetAll('audios');
+
+  renderCatGrid();
+  renderStats();
+  injectExportCard();
+
+  // handle deep-link hash to a category if present (not required, safe no-op otherwise)
+}
+init();
+
+})();
+</script>
 
 
-</body></html>
+<script type="application/json" id="seed-data">{"categories":[{"id":"id_msihc1ol_fbgfyc3","name":"Quran Classes 2026","order":0,"createdAt":1786079022213}],"audios":[{"id":"id_mske659i_ukybf82","categoryId":"id_msihc1ol_fbgfyc3","name":"July","order":1,"size":0,"type":"audio/mpeg","addedAt":1786194640422,"url":"https://archive.org/download/1.-july/1.July.m4a","base64":null}],"adminPasswordHash":"240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9"}</script></body></html>
